@@ -33,7 +33,7 @@ const NAV = [
   ['/legal', 'Policies'],
 ];
 
-const logo = `<span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="28" height="28"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M11 8v16M11 16.5 20.5 8M14.5 13.5 21 24" style="stroke:var(--on-mark)" stroke-width="2.6" stroke-linecap="round" fill="none"/></svg></span><span class="logo-text" translate="no">Karis Global Retail</span>`;
+const logo = `<img class="logo-mark" src="/logo.png" width="32" height="32" alt=""><span class="logo-text" translate="no">Karis Global Retail</span>`;
 
 function header(path) {
   const current = (href) => path === href || path.startsWith(href + '/');
@@ -107,7 +107,8 @@ ${noindex ? '<meta name="robots" content="noindex">\n' : ''}<meta property="og:t
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0a1626" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 ${schema ? `<script type="application/ld+json">${JSON.stringify(schema)}</script>\n` : ''}</head>

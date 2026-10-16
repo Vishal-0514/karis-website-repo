@@ -9,7 +9,7 @@ const organization = {
   name: company.legalName,
   alternateName: company.displayName,
   url: site.siteUrl + '/',
-  logo: site.siteUrl + '/favicon.svg',
+  logo: site.siteUrl + '/logo.png',
   foundingDate: company.incorporatedIso,
   email: contact.business,
   ...(contact.phone ? { telephone: contact.phone } : {}),
