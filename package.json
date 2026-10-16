@@ -1,0 +1,12 @@
+{
+  "name": "karis-global-retail-website",
+  "private": true,
+  "description": "Official website of Karis Global Retail Private Limited",
+  "scripts": {
+    "build": "node build.mjs",
+    "preview": "npx serve dist"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
