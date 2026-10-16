@@ -42,7 +42,7 @@ Messages go to the Kya Khaun server (`POST /api/contact`) and are saved in the `
 ## Put it live (Vercel, free)
 
 1. Create a Vercel account at https://vercel.com, using **Continue with GitHub**.
-2. **Add New → Project →** import the `karis-global-retail-website` repository.
+2. **Add New → Project →** import the `karis-website-repo` repository.
 3. Leave **Root Directory** as it is (the repo root). Vercel reads `vercel.json`, which sets the build command (`node build.mjs`), the output folder (`dist`) and clean URLs.
 4. **Deploy.** You get a temporary `*.vercel.app` link to check.
 5. **Settings → Domains → Add** `karisglobalretail.com` (and `www.karisglobalretail.com`). Vercel shows the DNS records to add at your domain registrar (GoDaddy/Hostinger → DNS). Don't delete the email (MX/TXT) records there.
