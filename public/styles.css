@@ -95,7 +95,9 @@ strong { font-weight: 500; color: var(--ink); }
 .menu summary span { display: block; width: 20px; height: 1.5px; background: var(--ink); transition: transform 0.25s ease; }
 .menu[open] summary span:first-child { transform: translateY(3.75px) rotate(45deg); }
 .menu[open] summary span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
-.menu nav { position: fixed; left: 0; right: 0; top: 64px; bottom: 0; background: var(--canvas); padding: 12px 24px 40px; display: grid; align-content: start; }
+/* The topbar's backdrop-filter makes it the containing block for fixed children, so size the panel to the viewport explicitly. */
+.menu nav { position: fixed; left: 0; right: 0; top: 64px; height: calc(100vh - 64px); height: calc(100dvh - 64px); overflow-y: auto; overscroll-behavior: contain; background: var(--canvas); padding: 12px 24px 40px; display: grid; align-content: start; }
+html:has(.menu[open]) { overflow: hidden; }
 .menu nav a { color: var(--ink); font-size: 26px; font-weight: 300; letter-spacing: -0.02em; padding: 14px 0; border-bottom: 1px solid var(--hairline); }
 @media (max-width: 780px) { .topbar .nav, .topbar .nav-cta { display: none; } .menu { display: block; } }
 
