@@ -282,12 +282,74 @@ thead th { font-size: 13px; color: var(--mute); font-weight: 500; }
 .footer-base { margin: 48px 0 0; padding-top: 24px; border-top: 1px solid var(--hairline); font-size: 13px; }
 @media (max-width: 860px) { .footer-top { grid-template-columns: 1fr 1fr; } .footer-brand { grid-column: 1 / -1; } }
 
-/* Entrance for the first screen; off when reduced motion is preferred */
+/* Motion. One easing curve everywhere: fast out, long soft settle.
+   Hover and state changes are short (0.2-0.35s); entrances are slower
+   (0.7-1s) and only move a few pixels. All of it is off for reduced motion. */
+:root { --ease: cubic-bezier(0.16, 1, 0.3, 1); }
+
+/* Hover and state transitions */
+.topbar { transition: box-shadow 0.35s var(--ease), background-color 0.35s var(--ease); }
+.topbar.scrolled { box-shadow: 0 6px 24px rgba(0, 55, 112, 0.07); }
+.nav a { position: relative; transition: color 0.2s ease; }
+.nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -6px; height: 1.5px; border-radius: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform 0.35s var(--ease); }
+.nav a:hover::after, .nav a[aria-current='page']::after { transform: scaleX(1); }
+.logo-mark { transition: transform 0.5s var(--ease); }
+.logo:hover .logo-mark { transform: rotate(-6deg) scale(1.06); }
+.btn { transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.3s var(--ease), transform 0.3s var(--ease); }
+.btn:hover { box-shadow: 0 6px 18px color-mix(in srgb, var(--primary) 28%, transparent); transform: translateY(-1px); }
+.btn:active { transform: translateY(0) scale(0.98); box-shadow: none; }
+.btn.on-navy:hover { box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25); }
+.chev::after { transition: transform 0.3s var(--ease); }
+.product, .note { transition: box-shadow 0.4s var(--ease), transform 0.4s var(--ease), border-color 0.4s var(--ease); }
+.product:hover, .note:hover { box-shadow: var(--lift-2); transform: translateY(-3px); }
+.link-card { transition: box-shadow 0.35s var(--ease), transform 0.35s var(--ease), border-color 0.35s var(--ease); }
+.link-card:hover { border-color: color-mix(in srgb, var(--primary) 30%, var(--hairline)); }
+.link-card .chev { transition: transform 0.35s var(--ease); }
+.link-card:hover .chev { transform: translateX(4px); }
+.footer-col a, .crumbs a, .toc li a, .text-link { transition: color 0.2s ease, border-color 0.2s ease, padding-left 0.3s var(--ease); }
+.toc li a:hover { padding-left: 20px; }
+.field input, .field select, .field textarea { transition: border-color 0.2s ease, box-shadow 0.3s var(--ease); }
+.form-status { transition: color 0.2s ease; }
+
 @media (prefers-reduced-motion: no-preference) {
-  .rise { animation: rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
-  .rise.d1 { animation-delay: 0.08s; }
-  .rise.d2 { animation-delay: 0.18s; }
-  @keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
-  .mesh svg { animation: drift 24s ease-in-out infinite alternate; transform-origin: 70% 30%; }
-  @keyframes drift { from { transform: scale(1); } to { transform: scale(1.08) translateX(-2%); } }
+  html { scroll-behavior: smooth; }
+
+  /* First screen: hero copy rises in, the mesh breathes slowly */
+  .rise { animation: rise 1s var(--ease) both; }
+  .rise.d1 { animation-delay: 0.1s; }
+  .rise.d2 { animation-delay: 0.22s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(18px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+  .mesh { animation: mesh-in 1.4s var(--ease) both; }
+  @keyframes mesh-in { from { opacity: 0; } to { opacity: 1; } }
+  .mesh svg { animation: drift 28s ease-in-out infinite alternate; transform-origin: 70% 30%; }
+  @keyframes drift { from { transform: scale(1) translateX(0); } to { transform: scale(1.08) translateX(-2%); } }
+  .navy-band::before { animation: glow 14s ease-in-out infinite alternate; }
+  .navy-band::after { animation: glow 18s ease-in-out infinite alternate-reverse; }
+  @keyframes glow { from { translate: 0 0; } to { translate: -60px 40px; } }
+
+  /* Scroll reveal (classes added by motion.js). Uses translate so hover transforms stay free. */
+  .reveal { opacity: 0; translate: 0 24px; transition: opacity 0.9s var(--ease) var(--reveal-delay, 0s), translate 0.9s var(--ease) var(--reveal-delay, 0s), box-shadow 0.4s var(--ease), transform 0.4s var(--ease), border-color 0.4s var(--ease); }
+  .reveal.in { opacity: 1; translate: 0 0; }
+
+  /* Mobile menu: panel fades down, links follow one by one */
+  .menu[open] nav { animation: menu-in 0.45s var(--ease) both; }
+  .menu[open] nav a { animation: menu-link 0.55s var(--ease) both; }
+  .menu[open] nav a:nth-child(2) { animation-delay: 0.04s; }
+  .menu[open] nav a:nth-child(3) { animation-delay: 0.08s; }
+  .menu[open] nav a:nth-child(4) { animation-delay: 0.12s; }
+  .menu[open] nav a:nth-child(5) { animation-delay: 0.16s; }
+  @keyframes menu-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+  @keyframes menu-link { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+  /* Page to page: a soft cross-fade with a slight lift, the top bar stays put */
+  @view-transition { navigation: auto; }
+  .topbar { view-transition-name: topbar; }
+  ::view-transition-old(root) { animation: page-out 0.22s ease both; }
+  ::view-transition-new(root) { animation: page-in 0.5s var(--ease) both; }
+  @keyframes page-out { to { opacity: 0; } }
+  @keyframes page-in { from { opacity: 0; transform: translateY(10px); } }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }

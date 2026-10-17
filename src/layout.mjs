@@ -119,6 +119,7 @@ ${header(path)}
 ${body}
 </main>
 ${footer()}
+<script src="/motion.js"></script>
 </body>
 </html>
 `;
