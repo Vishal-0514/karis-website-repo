@@ -45,7 +45,7 @@ export default [
     </article>
     <article class="note">
       <h2>About the AI</h2>
-      <p>Replies, recipe ideas and fridge scans are made by Claude, an AI model from Anthropic. The app asks before using it, and people can choose basic mode instead.</p>
+      <p>Replies, recipe ideas, fridge scans and photo ideas are made by Claude, an AI model from Anthropic. The app asks before using it, and people can choose basic mode instead.</p>
       <p>AI can make mistakes. It does not give nutritional, medical or allergy advice, and it can't promise a restaurant or dish is available. Every AI reply can be reported.</p>
     </article>
   </div>
@@ -78,7 +78,7 @@ export default [
   <h3>A reply from Chatora looks wrong or unsafe.</h3>
   <p>Tap "Report" under the reply and choose a reason. We review reports. Always check allergens and ingredients with the restaurant.</p>
   <h3>How do I turn off AI?</h3>
-  <p>Profile → Use AI → "Not now, use basic mode". The app keeps working with simpler matching; photo scan is switched off.</p>
+  <p>Profile → Use AI → "Not now, use basic mode". The app keeps working with simpler matching; photo scan and Snap My Mood are switched off.</p>
   <h3>How do I stop the app learning my taste?</h3>
   <p>Profile → turn off "Remember my taste". You can also clear what it learned there.</p>
   <h3>How do I delete my chats, history or account?</h3>
@@ -111,6 +111,7 @@ ${policy({
 <tr><td><strong>What you do with picks:</strong> dishes or places you open, order, save or mark "Not for me".</td><td>To learn your taste and show "Order again". Only while "Remember my taste" is on (saves are kept because you asked for them).</td></tr>
 <tr><td><strong>Approximate location</strong>, if you allow it.</td><td>To find food and places to go near you, to work out drive times, and to check the weather there (rain or heat changes what Chatora suggests). It is sent with each search and not stored in your account.</td></tr>
 <tr><td><strong>Fridge or shelf photos</strong>, only when you choose to scan.</td><td>To spot the ingredients you have. We don't keep the photo.</td></tr>
+<tr><td><strong>A photo of where you are</strong> (Snap My Mood), only when you take one, and an optional line you add.</td><td>To read the setting (indoors or out, time of day, rain, how many people are there, a drink in view) and suggest food and places that fit. We don't keep the photo, and Chatora never tries to identify anyone or guess how anyone feels.</td></tr>
 <tr><td><strong>Voice</strong>, only when you tap the microphone.</td><td>Your phone's own speech recognition (Google or Apple) turns it into text; we receive only the text.</td></tr>
 <tr><td><strong>Chatora's spoken replies</strong>, only when you use voice chat, tap Listen or turn on "Read replies aloud".</td><td>The text of Chatora's reply is sent to Google Cloud Text-to-Speech to make the audio, which is kept on our server for up to 15 minutes. Your own voice is never sent.</td></tr>
 <tr><td><strong>Reports</strong> you send about an AI reply.</td><td>To review and improve safety.</td></tr>
@@ -121,14 +122,14 @@ ${policy({
       title: 'App permissions',
       html: `<ul>
 <li><strong>Location</strong> (optional): nearby restaurants, places to go out to with drive times, and the local weather. Without it, you still get suggestions.</li>
-<li><strong>Camera and photos</strong> (optional): fridge scan. You can type ingredients instead.</li>
+<li><strong>Camera and photos</strong> (optional): fridge scan and Snap My Mood. You can type instead.</li>
 <li><strong>Microphone and speech recognition</strong> (optional): speaking instead of typing.</li>
 <li><strong>Notifications</strong> (optional): meal reminders you set yourself.</li>
 </ul><p>Each is asked for only when you use that feature, and can be turned off in your phone settings.</p>`,
     },
     {
       title: 'Artificial intelligence (AI)',
-      html: `<p>Chatora's replies and recipe ideas come from Claude, an AI model made by Anthropic. The app asks before using it. If you agree, we send Anthropic what's needed to answer you: your message and the recent chat, your taste settings, your first name and, when you scan, the photo. Not your email, your exact location or anything else on your phone. Anthropic processes it to produce a reply and, under its commercial terms, does not use it to train its models. You can turn AI off in Profile → Use AI.</p>`,
+      html: `<p>Chatora's replies and recipe ideas come from Claude, an AI model made by Anthropic. The app asks before using it. If you agree, we send Anthropic what's needed to answer you: your message and the recent chat, your taste settings, your first name and, when you scan or snap, the photo. Not your email, your exact location or anything else on your phone. Anthropic processes it to produce a reply and, under its commercial terms, does not use it to train its models. You can turn AI off in Profile → Use AI.</p>`,
     },
     {
       title: 'Who we share it with',
