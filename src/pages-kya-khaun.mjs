@@ -109,6 +109,7 @@ ${policy({
 <tr><td><strong>Your taste:</strong> diet, spice level, budget, favourite cuisines and things you avoid.</td><td>To suggest food that suits you.</td></tr>
 <tr><td><strong>Chats with Chatora</strong>, and day plans you save.</td><td>To answer you, and so you can return to them.</td></tr>
 <tr><td><strong>What you do with picks:</strong> dishes or places you open, order, save or mark "Not for me".</td><td>To learn your taste and show "Order again". Only while "Remember my taste" is on (saves are kept because you asked for them).</td></tr>
+<tr><td><strong>Crash reports</strong>: when the app or our server hits an error, the app version, phone model and system, and what went wrong.</td><td>To find and fix bugs. They don't include your chats, photos, location or account details.</td></tr>
 <tr><td><strong>Approximate location</strong>, if you allow it.</td><td>To find food and places to go near you, to work out drive times, and to check the weather there (rain or heat changes what Chatora suggests). It is sent with each search and not stored in your account.</td></tr>
 <tr><td><strong>Fridge or shelf photos</strong>, only when you choose to scan.</td><td>To spot the ingredients you have. We don't keep the photo.</td></tr>
 <tr><td><strong>A photo of where you are</strong> (Snap My Mood), only when you take one, and an optional line you add.</td><td>To read the setting (indoors or out, time of day, rain, how many people are there, a drink in view) and suggest food and places that fit. We don't keep the photo, and Chatora never tries to identify anyone or guess how anyone feels.</td></tr>
@@ -138,6 +139,7 @@ ${policy({
 <ul>
 <li><strong>Anthropic</strong>: AI replies, only if you agree (USA).</li>
 <li><strong>Google Firebase</strong>: sign-in and account emails. <strong>Google Maps Platform</strong>: nearby places, drive times and current weather, from your approximate location and what you searched. <strong>Google Cloud Text-to-Speech</strong>: turns Chatora's replies into a male or female voice, when you choose to hear them.</li>
+<li><strong>Sentry</strong> (Functional Software, Inc.): crash and error reports, so we can fix problems.</li>
 <li><strong>MongoDB Atlas</strong>: our database. <strong>Render</strong>: our server.</li>
 </ul>
 <p>Some providers process data outside India. When you choose Zomato or Swiggy, we open their app or website; we don't send them your data, and their privacy policies apply there. We may disclose information where the law requires it.</p>`,
