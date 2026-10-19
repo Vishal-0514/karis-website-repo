@@ -112,6 +112,7 @@ ${policy({
 <tr><td><strong>Approximate location</strong>, if you allow it.</td><td>To find food near you. It is sent with each search and not stored in your account.</td></tr>
 <tr><td><strong>Fridge or shelf photos</strong>, only when you choose to scan.</td><td>To spot the ingredients you have. We don't keep the photo.</td></tr>
 <tr><td><strong>Voice</strong>, only when you tap the microphone.</td><td>Your phone's own speech recognition (Google or Apple) turns it into text; we receive only the text.</td></tr>
+<tr><td><strong>Chatora's spoken replies</strong>, only when you use voice chat, tap Listen or turn on "Read replies aloud".</td><td>The text of Chatora's reply is sent to Google Cloud Text-to-Speech to make the audio, which is kept on our server for up to 15 minutes. Your own voice is never sent.</td></tr>
 <tr><td><strong>Reports</strong> you send about an AI reply.</td><td>To review and improve safety.</td></tr>
 </tbody></table>
 <p>Meal reminders and your language setting stay on your phone. We don't collect advertising IDs, contacts, or anything for advertising.</p>`,
@@ -134,7 +135,7 @@ ${policy({
       html: `<p>We don't sell personal data. These service providers process data on our behalf, only to run the app:</p>
 <ul>
 <li><strong>Anthropic</strong>: AI replies, only if you agree (USA).</li>
-<li><strong>Google Firebase</strong>: sign-in and account emails. <strong>Google Maps Platform</strong>: nearby places, from your approximate location and what you searched.</li>
+<li><strong>Google Firebase</strong>: sign-in and account emails. <strong>Google Maps Platform</strong>: nearby places, from your approximate location and what you searched. <strong>Google Cloud Text-to-Speech</strong>: turns Chatora's replies into a male or female voice, when you choose to hear them.</li>
 <li><strong>MongoDB Atlas</strong>: our database. <strong>Render</strong>: our server.</li>
 </ul>
 <p>Some providers process data outside India. When you choose Zomato or Swiggy, we open their app or website; we don't send them your data, and their privacy policies apply there. We may disclose information where the law requires it.</p>`,
