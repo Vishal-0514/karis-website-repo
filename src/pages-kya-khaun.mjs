@@ -78,7 +78,7 @@ export default [
   <h3>A reply from Chatora looks wrong or unsafe.</h3>
   <p>Tap "Report" under the reply and choose a reason. We review reports. Always check allergens and ingredients with the restaurant.</p>
   <h3>How do I turn off AI?</h3>
-  <p>Profile → Use AI → "Not now, use basic mode". The app keeps working with simpler matching; photo scan and Snap My Mood are switched off.</p>
+  <p>Profile → Use AI → "Not now, use basic mode". The app keeps working with simpler matching; photo scan, Snap My Mood and song picks are switched off.</p>
   <h3>How do I stop the app learning my taste?</h3>
   <p>Profile → turn off "Remember my taste". You can also clear what it learned there.</p>
   <h3>How do I delete my chats, history or account?</h3>
@@ -112,6 +112,7 @@ ${policy({
 <tr><td><strong>Approximate location</strong>, if you allow it.</td><td>To find food and places to go near you, to work out drive times, and to check the weather there (rain or heat changes what Chatora suggests). It is sent with each search and not stored in your account.</td></tr>
 <tr><td><strong>Fridge or shelf photos</strong>, only when you choose to scan.</td><td>To spot the ingredients you have. We don't keep the photo.</td></tr>
 <tr><td><strong>A photo of where you are</strong> (Snap My Mood), only when you take one, and an optional line you add.</td><td>To read the setting (indoors or out, time of day, rain, how many people are there, a drink in view) and suggest food and places that fit. We don't keep the photo, and Chatora never tries to identify anyone or guess how anyone feels.</td></tr>
+<tr><td><strong>A photo of your food</strong> (Songs for your meal), only when you take one, the language you pick and an optional line.</td><td>To suggest 3–4 songs for the moment. We don't keep the photo. To make sure each song is real, only the song and artist names are checked against Apple's public music catalogue; nothing about you is sent to Apple. Songs open in Spotify, YouTube Music or Apple Music, which we're not linked to.</td></tr>
 <tr><td><strong>Voice</strong>, only when you tap the microphone.</td><td>Your phone's own speech recognition (Google or Apple) turns it into text; we receive only the text.</td></tr>
 <tr><td><strong>Chatora's spoken replies</strong>, only when you use voice chat, tap Listen or turn on "Read replies aloud".</td><td>The text of Chatora's reply is sent to Google Cloud Text-to-Speech to make the audio, which is kept on our server for up to 15 minutes. Your own voice is never sent.</td></tr>
 <tr><td><strong>Reports</strong> you send about an AI reply.</td><td>To review and improve safety.</td></tr>
@@ -122,7 +123,7 @@ ${policy({
       title: 'App permissions',
       html: `<ul>
 <li><strong>Location</strong> (optional): nearby restaurants, places to go out to with drive times, and the local weather. Without it, you still get suggestions.</li>
-<li><strong>Camera and photos</strong> (optional): fridge scan and Snap My Mood. You can type instead.</li>
+<li><strong>Camera and photos</strong> (optional): fridge scan, Snap My Mood and songs for your meal. You can type instead.</li>
 <li><strong>Microphone and speech recognition</strong> (optional): speaking instead of typing.</li>
 <li><strong>Notifications</strong> (optional): meal reminders you set yourself.</li>
 </ul><p>Each is asked for only when you use that feature, and can be turned off in your phone settings.</p>`,
