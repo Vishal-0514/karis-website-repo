@@ -109,7 +109,7 @@ ${policy({
 <tr><td><strong>Your taste:</strong> diet, spice level, budget, favourite cuisines and things you avoid.</td><td>To suggest food that suits you.</td></tr>
 <tr><td><strong>Chats with Chatora</strong>, and day plans you save.</td><td>To answer you, and so you can return to them.</td></tr>
 <tr><td><strong>What you do with picks:</strong> dishes or places you open, order, save or mark "Not for me".</td><td>To learn your taste and show "Order again". Only while "Remember my taste" is on (saves are kept because you asked for them).</td></tr>
-<tr><td><strong>Approximate location</strong>, if you allow it.</td><td>To find food near you and to check the weather there (rain or heat changes what Chatora suggests). It is sent with each search and not stored in your account.</td></tr>
+<tr><td><strong>Approximate location</strong>, if you allow it.</td><td>To find food and places to go near you, to work out drive times, and to check the weather there (rain or heat changes what Chatora suggests). It is sent with each search and not stored in your account.</td></tr>
 <tr><td><strong>Fridge or shelf photos</strong>, only when you choose to scan.</td><td>To spot the ingredients you have. We don't keep the photo.</td></tr>
 <tr><td><strong>Voice</strong>, only when you tap the microphone.</td><td>Your phone's own speech recognition (Google or Apple) turns it into text; we receive only the text.</td></tr>
 <tr><td><strong>Chatora's spoken replies</strong>, only when you use voice chat, tap Listen or turn on "Read replies aloud".</td><td>The text of Chatora's reply is sent to Google Cloud Text-to-Speech to make the audio, which is kept on our server for up to 15 minutes. Your own voice is never sent.</td></tr>
@@ -120,7 +120,7 @@ ${policy({
     {
       title: 'App permissions',
       html: `<ul>
-<li><strong>Location</strong> (optional): nearby restaurants and the local weather. Without it, you still get suggestions.</li>
+<li><strong>Location</strong> (optional): nearby restaurants, places to go out to with drive times, and the local weather. Without it, you still get suggestions.</li>
 <li><strong>Camera and photos</strong> (optional): fridge scan. You can type ingredients instead.</li>
 <li><strong>Microphone and speech recognition</strong> (optional): speaking instead of typing.</li>
 <li><strong>Notifications</strong> (optional): meal reminders you set yourself.</li>
@@ -135,7 +135,7 @@ ${policy({
       html: `<p>We don't sell personal data. These service providers process data on our behalf, only to run the app:</p>
 <ul>
 <li><strong>Anthropic</strong>: AI replies, only if you agree (USA).</li>
-<li><strong>Google Firebase</strong>: sign-in and account emails. <strong>Google Maps Platform</strong>: nearby places and current weather, from your approximate location and what you searched. <strong>Google Cloud Text-to-Speech</strong>: turns Chatora's replies into a male or female voice, when you choose to hear them.</li>
+<li><strong>Google Firebase</strong>: sign-in and account emails. <strong>Google Maps Platform</strong>: nearby places, drive times and current weather, from your approximate location and what you searched. <strong>Google Cloud Text-to-Speech</strong>: turns Chatora's replies into a male or female voice, when you choose to hear them.</li>
 <li><strong>MongoDB Atlas</strong>: our database. <strong>Render</strong>: our server.</li>
 </ul>
 <p>Some providers process data outside India. When you choose Zomato or Swiggy, we open their app or website; we don't send them your data, and their privacy policies apply there. We may disclose information where the law requires it.</p>`,
