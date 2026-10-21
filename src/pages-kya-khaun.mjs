@@ -142,7 +142,7 @@ ${policy({
 <li><strong>Anthropic</strong>: AI replies, only if you agree (USA).</li>
 <li><strong>Google Firebase</strong>: sign-in and account emails. <strong>Google Maps Platform</strong>: nearby places, drive times and current weather, from your location and what you searched. <strong>Google Cloud Text-to-Speech</strong>: turns Chatora's replies into a male or female voice, when you choose to hear them.</li>
 <li><strong>Sentry</strong> (Functional Software, Inc.): crash and error reports, so we can fix problems.</li>
-<li><strong>MongoDB Atlas</strong>: our database. <strong>Render</strong>: our server.</li>
+<li><strong>MongoDB Atlas</strong>: our database. <strong>Google Cloud Run</strong> (Mumbai, India): our server; <strong>Render</strong> also runs it while older test versions of the app are in use.</li>
 </ul>
 <p>Some providers process data outside India. When you choose Zomato or Swiggy, we open their app or website; we don't send them your data, and their privacy policies apply there. We may disclose information where the law requires it.</p>`,
     },

@@ -45,7 +45,7 @@ ${policy({
       html: `<p>We don't sell personal data. These service providers process it on our behalf, only to run our website and email:</p>
 <ul>
 <li><strong>Vercel</strong>: hosts this website.</li>
-<li><strong>Render</strong> and <strong>MongoDB Atlas</strong>: receive and store contact form messages.</li>
+<li><strong>Google Cloud Run</strong> and <strong>MongoDB Atlas</strong>: receive and store contact form messages.</li>
 <li><strong>Google</strong>: our email service.</li>
 </ul>
 <p>Some providers process data outside India. We may disclose information where the law requires it.</p>`,

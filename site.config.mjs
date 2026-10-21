@@ -34,10 +34,10 @@ export default {
 
   // Where the contact form sends messages (the Kya Khaun server stores them).
   // Local testing: CONTACT_ENDPOINT=http://localhost:4100/api/contact node build.mjs
-  contactEndpoint: process.env.CONTACT_ENDPOINT || 'https://kya-khaun-server.onrender.com/api/contact',
+  contactEndpoint: process.env.CONTACT_ENDPOINT || 'https://kay-khaun-371649248031.asia-south1.run.app/api/contact',
 
   // Effective date shown on policies. Update it whenever a policy changes.
-  policyDate: '15 October 2026',
+  policyDate: '22 October 2026',
   appPolicyDate: '22 October 2026',
 
   apps: {
