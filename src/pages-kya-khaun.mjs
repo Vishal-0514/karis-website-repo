@@ -27,7 +27,7 @@ export default [
     <h2 class="section-title">What it does.</h2>
     <div class="features">
       <div><h3>Say what you feel like</h3><p>Type or speak a craving, a budget and how quickly you need it, in English, Hindi or Hinglish. Or choose a mood: spicy, comfort, light, street or sweet.</p></div>
-      <div><h3>Picks near you</h3><p>With permission to use approximate location, it suggests nearby restaurants using Google's places information, and typical dishes to look for.</p></div>
+      <div><h3>Picks near you</h3><p>With permission to use your location, it suggests nearby restaurants using Google's places information, and typical dishes to look for.</p></div>
       <div><h3>Cook at home</h3><p>List what's in your kitchen, or photograph your fridge, and get recipes. Cook step by step with Chatora reading each step aloud, then keep a photo of your dish in My Kitchen.</p></div>
       <div><h3>Plan your day, or order for a group</h3><p>Breakfast to dinner within a budget, or places that suit a group of friends, family or colleagues, veg and non-veg.</p></div>
       <div><h3>Festivals and snaps</h3><p>What people eat for each festival, and dishes that fit where you are: snap the place, say veg or non-veg, and pick.</p></div>
@@ -112,7 +112,7 @@ ${policy({
 <tr><td><strong>What you do with picks:</strong> dishes or places you save, open on Zomato or Swiggy, or mark "Not for me".</td><td>For your Saved list, History and "Order again". We don't build a taste profile from it.</td></tr>
 <tr><td><strong>Group orders</strong>: how many people, how many are veg, the kind of group and the budget each, when you use Order for a Group.</td><td>To find places that suit everyone. Not stored in your account.</td></tr>
 <tr><td><strong>Crash reports</strong>: when the app or our server hits an error, the app version, phone model and system, and what went wrong.</td><td>To find and fix bugs. They don't include your chats, photos, location or account details.</td></tr>
-<tr><td><strong>Approximate location</strong>, if you allow it.</td><td>To find food and places to go near you, to work out drive times, and to check the weather there (rain or heat changes what Chatora suggests). It is sent with each search and not stored in your account.</td></tr>
+<tr><td><strong>Your location</strong> (precise or approximate, as you choose on your phone), if you allow it.</td><td>To find food and places to go near you, to work out drive times, and to check the weather there (rain or heat changes what Chatora suggests). It is sent with each search and not stored in your account.</td></tr>
 <tr><td><strong>Fridge or shelf photos</strong>, only when you choose to scan.</td><td>To spot the ingredients you have. We don't keep the photo.</td></tr>
 <tr><td><strong>A photo of where you are</strong> (Snap Your Order), only when you take one.</td><td>To read the setting (indoors or out, time of day, weather) and suggest dishes that fit. We don't keep the photo, and Chatora never tries to identify anyone or guess how anyone feels.</td></tr>
 <tr><td><strong>A photo of your food</strong> (Songs for your meal), only when you take one, the language you pick and an optional line.</td><td>To suggest 3–4 songs for the moment. We don't keep the photo. To make sure each song is real, only the song and artist names are checked against Apple's public music catalogue; nothing about you is sent to Apple. Songs open in Spotify, YouTube Music or Apple Music, which we're not linked to.</td></tr>
@@ -140,7 +140,7 @@ ${policy({
       html: `<p>We don't sell personal data. These service providers process data on our behalf, only to run the app:</p>
 <ul>
 <li><strong>Anthropic</strong>: AI replies, only if you agree (USA).</li>
-<li><strong>Google Firebase</strong>: sign-in and account emails. <strong>Google Maps Platform</strong>: nearby places, drive times and current weather, from your approximate location and what you searched. <strong>Google Cloud Text-to-Speech</strong>: turns Chatora's replies into a male or female voice, when you choose to hear them.</li>
+<li><strong>Google Firebase</strong>: sign-in and account emails. <strong>Google Maps Platform</strong>: nearby places, drive times and current weather, from your location and what you searched. <strong>Google Cloud Text-to-Speech</strong>: turns Chatora's replies into a male or female voice, when you choose to hear them.</li>
 <li><strong>Sentry</strong> (Functional Software, Inc.): crash and error reports, so we can fix problems.</li>
 <li><strong>MongoDB Atlas</strong>: our database. <strong>Render</strong>: our server.</li>
 </ul>
