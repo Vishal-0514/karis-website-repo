@@ -38,7 +38,7 @@ export default {
 
   // Effective date shown on policies. Update it whenever a policy changes.
   policyDate: '22 October 2026',
-  appPolicyDate: '22 October 2026',
+  appPolicyDate: '20 November 2026',
 
   apps: {
     karis: { name: 'KARIS', status: 'In development' },

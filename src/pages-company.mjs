@@ -104,7 +104,7 @@ ${closing('Talk to Karis Global Retail.', 'Partnerships, press, product support 
   <div class="wrap statement">
     <div>
       <p class="big">Karis Global Retail Private Limited was incorporated in India on ${esc(company.incorporated)}.</p>
-      <p style="margin-top:24px">We are developing digital products that connect people with relevant products and discoveries. Our first two products are a food discovery app that helps people decide what to eat, and a women's fashion marketplace.</p>
+      <p style="margin-top:24px">We are developing digital products that connect people with relevant products and discoveries. Our first two products are a home cooking app that helps people decide what to cook, and a women's fashion marketplace.</p>
       <p>Our registered office is in Andheri West, Mumbai, and we build for people across India.</p>
       <p><a class="text-link" href="/apps">See our products <span class="chev" aria-hidden="true"></span></a></p>
     </div>
@@ -130,19 +130,19 @@ ${closing('Get in touch.', 'Business inquiries, partnerships or questions about 
   {
     path: '/apps',
     title: 'Products',
-    description: `Products built by ${company.legalName}: Kya Khaun? (food discovery) and KARIS (women's fashion marketplace).`,
+    description: `Products built by ${company.legalName}: Kya Khaun? (home cooking) and KARIS (women's fashion marketplace).`,
     body: `${hero({ title: 'Products by Karis Global Retail', lead: 'Each product has its own support page, privacy policy, terms and account deletion page.', trail: [['/', 'Home'], 'Products'] })}
 <section class="section" style="padding-top:24px">
   <div class="wrap products">
     <article class="product">
       <div><span class="tag">In development</span></div>
       <h2>Kya Khaun?</h2>
-      <p class="kind">Food discovery app</p>
+      <p class="kind">Home cooking app</p>
       <ul>
-        <li>Tell it a craving, a budget or a mood, in English, Hindi or Hinglish.</li>
-        <li>Get dishes and nearby places to order from, or recipes from what's in your kitchen.</li>
-        <li>Plan a whole day of meals within a budget.</li>
-        <li>Ordering happens on Zomato or Swiggy. Kya Khaun? doesn't take orders or payments.</li>
+        <li>Recipes from what's in your fridge, or from a mood or a craving, in English, Hindi or Hinglish.</li>
+        <li>Cook step by step with timers and a voice guide, and ask Chatora any cooking question.</li>
+        <li>Drinks, festival dishes and a simple calorie planner.</li>
+        <li>Cooking only: Kya Khaun? doesn't sell or deliver food, or take payments.</li>
       </ul>
       <div class="ctas"><a class="btn" href="/apps/kya-khaun">View product <span class="chev" aria-hidden="true"></span></a></div>
       <nav class="product-links" aria-label="Kya Khaun? policies"><a href="/apps/kya-khaun/privacy">Privacy policy</a><a href="/apps/kya-khaun/terms">Terms of use</a><a href="/apps/kya-khaun/delete-account">Delete account</a><a href="/apps/kya-khaun/support">Support</a></nav>
