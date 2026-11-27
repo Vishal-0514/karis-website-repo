@@ -80,7 +80,7 @@ export default [
   <h3>Why does my dish photo not count?</h3>
   <p>Points and badges count only a real photo of the dish you just cooked. Chatora checks the photo and tells you why when it doesn't count, for example a screenshot or a different dish.</p>
   <h3>Where are the photos of dishes I cooked?</h3>
-  <p>In My Kitchen, on your phone. Long-press a dish to remove it; uninstalling the app removes them all. We also keep a copy on our server for 30 days, then it is deleted. To have it deleted sooner, email ${privacyMail} or delete your account.</p>
+  <p>In My Kitchen, on your phone. Long-press a dish to remove it; uninstalling the app removes them all. We also keep a copy on our server until you delete your account. To have it deleted earlier, email ${privacyMail}.</p>
   <h3>How do I open the Bar?</h3>
   <p>The Bar has drinks with alcohol and is only for adults. Add your date of birth once in your profile; the Bar opens if you are 18 or older.</p>
   <h3>How do I change or stop notifications?</h3>
@@ -115,16 +115,16 @@ ${policy({
 <tr><td><strong>Saved recipes and history</strong>: recipes you save, open or plan.</td><td>For your Saved list and History. We don't build a taste profile from it.</td></tr>
 <tr><td><strong>Questions to Chatora</strong>, and the recent chat on that screen.</td><td>To answer you. Ask Chatora chats are not stored in your account.</td></tr>
 <tr><td><strong>What you ate</strong>, when you type it in the calorie planner, and your daily calorie goal.</td><td>To estimate calories and suggest meals. Estimates only, not medical advice. Your daily log stays on your phone.</td></tr>
-<tr><td><strong>Fridge or shelf photos</strong>, only when you choose to scan.</td><td>To spot the ingredients you have. We keep a copy for 30 days to check and improve the photo features, then it is deleted. To have yours deleted sooner, email ${privacyMail} or delete your account.</td></tr>
-<tr><td><strong>Pan photos</strong>, only when you ask Chatora to check a cooking step.</td><td>To tell you if the step looks done. We keep a copy for 30 days to check and improve the photo features, then it is deleted. To have yours deleted sooner, email ${privacyMail} or delete your account.</td></tr>
-<tr><td><strong>A photo of a dish you cooked</strong>, when you add one for points and badges.</td><td>Checked to confirm it is a real photo of that dish. Your copy stays in My Kitchen on your phone. We keep a copy for 30 days to check and improve the photo features, then it is deleted. To have yours deleted sooner, email ${privacyMail} or delete your account.</td></tr>
+<tr><td><strong>Fridge or shelf photos</strong>, only when you choose to scan.</td><td>To spot the ingredients you have. We keep a copy to check and improve the photo features, until you delete your account. To have yours deleted earlier, email ${privacyMail}.</td></tr>
+<tr><td><strong>Pan photos</strong>, only when you ask Chatora to check a cooking step.</td><td>To tell you if the step looks done. We keep a copy to check and improve the photo features, until you delete your account. To have yours deleted earlier, email ${privacyMail}.</td></tr>
+<tr><td><strong>A photo of a dish you cooked</strong>, when you add one for points and badges.</td><td>Checked to confirm it is a real photo of that dish. Your copy stays in My Kitchen on your phone. We keep a copy to check and improve the photo features, until you delete your account. To have yours deleted earlier, email ${privacyMail}.</td></tr>
 <tr><td><strong>Voice</strong>, only when you tap the microphone.</td><td>Your phone's own speech recognition (Google or Apple) turns it into text; we receive only the text.</td></tr>
 <tr><td><strong>Chatora's spoken lines</strong>, when you use voice, tap Listen or cook with the voice on.</td><td>The text to be spoken is sent to Google Cloud Text-to-Speech to make the audio, which is kept on our server for up to 15 minutes. Your own voice is never sent.</td></tr>
-<tr><td><strong>Phone and app version</strong>: the phone's system (Android or iOS and its version), the model name on Android, and the app version. No device or advertising IDs.</td><td>To know which phones the app must work well on, and to help when you contact support.</td></tr>
+<tr><td><strong>Phone and app version</strong>: the phone's system (Android or iOS and its version), the model name on Android, and the app version, plus the days you open the app. No device or advertising IDs.</td><td>To know which phones the app must work well on, how many people use it each day, and to help when you contact support.</td></tr>
 <tr><td><strong>Crash reports</strong>: when the app or our server hits an error, the app version, phone model and system, and what went wrong.</td><td>To find and fix bugs. They don't include your photos or account details.</td></tr>
 <tr><td><strong>Reports</strong> you send about an AI reply.</td><td>To review and improve safety.</td></tr>
 </tbody></table>
-<p><strong>Kept only on your phone:</strong> My Kitchen (your dish photos and their points and badges; our 30-day copy is described above), your profile photo, your calorie log, notification settings, and your language and voice settings. We never receive these. We don't collect your location, advertising IDs, contacts, or anything for advertising.</p>`,
+<p><strong>Kept only on your phone:</strong> My Kitchen (your dish photos and their points and badges; our copy is described above), your profile photo, your calorie log, notification settings, and your language and voice settings. We never receive these. We don't collect your location, advertising IDs, contacts, or anything for advertising.</p>`,
     },
     {
       title: 'App permissions',
@@ -152,13 +152,13 @@ ${policy({
     },
     {
       title: 'How long we keep it',
-      html: `<p>We keep your data while you have an account. You can remove saved recipes at any time in the app, and ask us to clear your history. Data saved by earlier versions of the app (chats, saved places, taste settings) is no longer used and is deleted with your account. Photos you scan or check are kept for 30 days, then deleted automatically. Our team looks at them only to check and improve the photo features, never shares them and never uses them for advertising. When you delete your account, your data, including those photos, is deleted from our database straight away; copies in backups are removed within 30 days.</p>`,
+      html: `<p>We keep your data while you have an account. You can remove saved recipes at any time in the app, and ask us to clear your history. Data saved by earlier versions of the app (chats, saved places, taste settings) is no longer used and is deleted with your account. Photos you scan or check are kept until you delete your account, or earlier if you ask us. Our team looks at them only to check and improve the photo features, never shares them and never uses them for advertising. When you delete your account, your data, including those photos, is deleted from our database straight away; copies in backups are removed within 30 days.</p>`,
     },
     {
       title: 'Your choices and rights',
       html: `<ul>
 <li>Turn off "Use AI" at any time in Settings.</li>
-<li>Ask us to delete the photos we kept (email ${privacyMail}); otherwise they are deleted automatically after 30 days.</li>
+<li>Ask us to delete the photos we kept (email ${privacyMail}); otherwise they are deleted with your account.</li>
 <li>Change your food type, spice level, allergies and date of birth in Settings.</li>
 <li>Remove dishes from My Kitchen on your phone at any time.</li>
 <li>Remove saved recipes or delete your account in the app, or <a href="${base}/delete-account">request deletion here</a>.</li>
